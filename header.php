@@ -13,6 +13,7 @@
 			'author'    =>  _t('%s 发布的文章')
 		), '', ' - '); ?><?php $this->options->title(); ?></title>
 		<link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
+		<link rel="stylesheet" href="<?php $this->options->themeUrl('highlight.css'); ?>">
 		<?php $this->header(); ?>
 
 	</head>

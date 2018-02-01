@@ -7,5 +7,7 @@
 				</p>
 			</footer>
 		</section>
+		<script src="<?php $this->options->themeUrl('highlight.js'); ?>"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
 	</body>
 </html>
