@@ -7,4 +7,10 @@ function themeConfig($form) {
 
 	$icpNumber = new Typecho_Widget_Helper_Form_Element_Text('icpNumber', NULL, NULL, _t('ICP 备案许可证号'), _t('在这里填入一个 ICP 备案许可证号, 留空则不显示.'));
 	$form->addInput($icpNumber);
+
+	$header = new Typecho_Widget_Helper_Form_Element_Textarea('header', NULL, NULL, _t('自定义 Header'), _t('在这里填入自定义 Header, 如自定义 CSS 样式等.'));
+	$form->addInput($header);
+
+	$footer = new Typecho_Widget_Helper_Form_Element_Textarea('footer', NULL, NULL, _t('自定义 Footer'), _t('在这里填入自定义 Footer, 如自定义 JavaScript 脚本等.'));
+	$form->addInput($footer);
 }

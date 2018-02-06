@@ -12,5 +12,8 @@
 		</section>
 		<script src="<?php $this->options->themeUrl('highlight.js'); ?>"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
+		<?php $this->footer(); ?>
+		<?php $this->options->footer(); ?>
+
 	</body>
 </html>

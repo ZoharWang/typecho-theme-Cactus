@@ -15,6 +15,7 @@
 		<link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
 		<link rel="stylesheet" href="<?php $this->options->themeUrl('highlight.css'); ?>">
 		<?php $this->header(); ?>
+		<?php $this->options->header(); ?>
 
 	</head>
 	<body>
