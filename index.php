@@ -15,7 +15,7 @@ if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 				<section id="wrapper">
 					<header id="header">
 						<a href="<?php $this->options->siteUrl(); ?>">
-							<img id="avatar" src="https://secure.gravatar.com/avatar/<?php echo md5(strtolower($this->author->mail)); ?>">
+							<img id="avatar" src="<?php if ($this->options->avatarUrl){$this->options->avatarUrl();}else{echo 'https://secure.gravatar.com/avatar/'.md5(strtolower(trim($this->author->mail)));}?>">
 						</a>
 						<h1><?php $this->options->title() ?></h1>
 						<h2><?php $this->options->description() ?></h2>
