@@ -12,6 +12,9 @@
 			'tag'       =>  _t('标签 %s 下的文章'),
 			'author'    =>  _t('%s 发布的文章')
 		), '', ' - '); ?><?php $this->options->title(); ?></title>
+<?php if ($this->options->themeColor) : ?>
+		<meta name="theme-color" content="<?php $this->options->themeColor(); ?>" />
+<?php endif; ?>
 		<link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
 		<link rel="stylesheet" href="<?php $this->options->themeUrl('highlight.css'); ?>">
 		<?php $this->header(); ?>
