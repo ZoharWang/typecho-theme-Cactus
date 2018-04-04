@@ -15,8 +15,13 @@
 <?php if ($this->options->themeColor) : ?>
 		<meta name="theme-color" content="<?php $this->options->themeColor(); ?>" />
 <?php endif; ?>
-		<link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>">
-		<link rel="stylesheet" href="<?php $this->options->themeUrl('highlight.css'); ?>">
+<?php if (!empty($this->options->optimizeOptions) && in_array('EnableCdn', $this->options->optimizeOptions)) : ?>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoharWang/typecho-theme-Cactus@<?php echo CACTUS_VERSION; ?>/style.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoharWang/typecho-theme-Cactus@<?php echo CACTUS_VERSION; ?>/highlight.min.css">
+<?php else : ?>
+		<link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>?v=<?php echo CACTUS_VERSION; ?>">
+		<link rel="stylesheet" href="<?php $this->options->themeUrl('highlight.css'); ?>?v=<?php echo CACTUS_VERSION; ?>">
+<?php endif; ?>
 		<?php $this->header(); ?>
 		<?php $this->options->header(); ?>
 
