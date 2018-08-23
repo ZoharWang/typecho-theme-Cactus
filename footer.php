@@ -10,12 +10,14 @@
 				</p>
 			</footer>
 		</section>
+<?php if (!empty($this->options->optimizeOptions) && in_array('EnableHighlighting', $this->options->optimizeOptions)) : ?>
 <?php if (!empty($this->options->optimizeOptions) && in_array('EnableCdn', $this->options->optimizeOptions)) : ?>
 		<script src="https://cdn.jsdelivr.net/gh/ZoharWang/typecho-theme-Cactus@<?php echo CACTUS_VERSION; ?>/highlight.min.js"></script>
 <?php else : ?>
 		<script src="<?php $this->options->themeUrl('highlight.js'); ?>?v=<?php echo CACTUS_VERSION; ?>"></script>
 <?php endif; ?>
 		<script>hljs.initHighlightingOnLoad();</script>
+<?php endif; ?>
 		<?php $this->footer(); ?>
 		<?php $this->options->footer(); ?>
 

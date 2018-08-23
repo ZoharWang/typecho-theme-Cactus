@@ -17,10 +17,14 @@
 <?php endif; ?>
 <?php if (!empty($this->options->optimizeOptions) && in_array('EnableCdn', $this->options->optimizeOptions)) : ?>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoharWang/typecho-theme-Cactus@<?php echo CACTUS_VERSION; ?>/style.min.css">
+<?php if (!empty($this->options->optimizeOptions) && in_array('EnableHighlighting', $this->options->optimizeOptions)) : ?>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ZoharWang/typecho-theme-Cactus@<?php echo CACTUS_VERSION; ?>/highlight.min.css">
+<?php endif; ?>
 <?php else : ?>
 		<link rel="stylesheet" href="<?php $this->options->themeUrl('style.css'); ?>?v=<?php echo CACTUS_VERSION; ?>">
+<?php if (!empty($this->options->optimizeOptions) && in_array('EnableHighlighting', $this->options->optimizeOptions)) : ?>
 		<link rel="stylesheet" href="<?php $this->options->themeUrl('highlight.css'); ?>?v=<?php echo CACTUS_VERSION; ?>">
+<?php endif; ?>
 <?php endif; ?>
 		<?php $this->header(); ?>
 		<?php $this->options->header(); ?>

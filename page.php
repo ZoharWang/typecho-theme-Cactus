@@ -6,7 +6,7 @@
 					<h2 class="headline"><?php $this->date('F j, Y'); ?></h2>
 				</header>
 				<section id="post-body">
-					<?php $this->content(); ?>
+					<?php parseContent($this); ?>
 
 				</section>
 			</article>

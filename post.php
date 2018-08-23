@@ -11,7 +11,7 @@
 					</h2>
 				</header>
 				<section id="post-body">
-					<?php $this->content(); ?>
+					<?php parseContent($this); ?>
 
 				</section>
 			</article>
